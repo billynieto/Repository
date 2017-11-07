@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<package >
+  <metadata>
+    <id>$id$</id>
+    <version>$version$</version>
+    <authors>$author$</authors>
+    <owners>$author$</owners>
+    <projectUrl>http://cpmtfs:8080/tfs/ProductDevelopmentCollection/Repository</projectUrl>
+    <iconUrl>http://cpmtfs:8080/tfs/ProductDevelopmentCollection/_api/_common/identityImage?id=a03b8501-0481-49f1-8460-8ab3dfca4e06&amp;__v=1</iconUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>$description$</description>
+    <copyright>Copyright 2017</copyright>
+    <tags>Repository Pattern Framework</tags>
+  </metadata>
+</package>

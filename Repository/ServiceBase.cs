@@ -58,7 +58,7 @@ namespace Repository
                     iStartedTheTransaction = true;
                 }
 
-                IEnumerable<TKey> savedKeys = new List<TKey>(Exists(keys));
+                IEnumerable<TKey> savedKeys = new List<TKey>(Exists(keys, transaction));
                 IEnumerable<TKey> notSavedKeys = keys.Where(_key => !savedKeys.Any(_savedKey => _savedKey.Equals(_key))).ToList();
 
                 if (notSavedKeys.Count() > 0)
@@ -101,7 +101,49 @@ namespace Repository
             if (key == null)
                 throw new ArgumentNullException("Key");
 
-            return this.repository.Exists(key);
+            bool iOpenedConnection = false;
+
+            try
+            {
+                if (!this.repository.IsOpen)
+                {
+                    iOpenedConnection = true;
+
+                    this.repository.Open();
+                }
+
+                return this.repository.Exists(key);
+            }
+            finally
+            {
+                if (iOpenedConnection)
+                    this.repository.Close();
+            }
+        }
+
+        public virtual bool Exists(TKey key, IDbTransaction transaction)
+        {
+            if (key == null)
+                throw new ArgumentNullException("Key");
+
+            bool iOpenedConnection = false;
+
+            try
+            {
+                if (!this.repository.IsOpen)
+                {
+                    iOpenedConnection = true;
+
+                    this.repository.Open();
+                }
+
+                return this.repository.Exists(key, transaction);
+            }
+            finally
+            {
+                if (iOpenedConnection)
+                    this.repository.Close();
+            }
         }
 
         public virtual IEnumerable<TKey> Exists(IEnumerable<TKey> keys)
@@ -121,6 +163,31 @@ namespace Repository
                 }
 
                 return this.repository.Exists(keys);
+            }
+            finally
+            {
+                if (iOpenedConnection)
+                    this.repository.Close();
+            }
+        }
+
+        public virtual IEnumerable<TKey> Exists(IEnumerable<TKey> keys, IDbTransaction transaction)
+        {
+            if (keys == null)
+                throw new ArgumentNullException("Keys");
+
+            bool iOpenedConnection = false;
+
+            try
+            {
+                if (!this.repository.IsOpen)
+                {
+                    iOpenedConnection = true;
+
+                    this.repository.Open();
+                }
+
+                return this.repository.Exists(keys, transaction);
             }
             finally
             {
@@ -176,6 +243,35 @@ namespace Repository
             }
         }
 
+        public virtual IEnumerable<TModel> Find(TMultipleSearch search, IDbTransaction transaction)
+        {
+            if (search == null)
+                throw new ArgumentNullException("Search");
+            search.Validate();
+
+            bool iOpenedConnection = false;
+
+            try
+            {
+                if (!this.repository.IsOpen)
+                {
+                    iOpenedConnection = true;
+
+                    this.repository.Open();
+
+                    if (!this.repository.IsOpen)
+                        throw new Exception("The Repository is not reporting being Opened after we opened it!");
+                }
+
+                return this.repository.Select(search, transaction);
+            }
+            finally
+            {
+                if (iOpenedConnection)
+                    this.repository.Close();
+            }
+        }
+
         public virtual TModel FindSingle(TSingleSearch search)
         {
             if (search == null)
@@ -205,12 +301,85 @@ namespace Repository
             }
         }
 
+        public virtual TModel FindSingle(TSingleSearch search, IDbTransaction transaction)
+        {
+            if (search == null)
+                throw new ArgumentNullException("Search");
+            search.Validate();
+
+            bool iOpenedConnection = false;
+
+            try
+            {
+                if (!this.repository.IsOpen)
+                {
+                    iOpenedConnection = true;
+
+                    this.repository.Open();
+
+                    if (!this.repository.IsOpen)
+                        throw new Exception("The Repository is not reporting being Opened after we opened it!");
+                }
+
+                return this.repository.Select(search, transaction);
+            }
+            finally
+            {
+                if (iOpenedConnection)
+                    this.repository.Close();
+            }
+        }
+
         public virtual void Save(TModel model, IDbTransaction transaction)
         {
             if (model == null)
                 throw new ArgumentNullException("Model");
 
-            Save(new List<TModel>() { model }, transaction);
+            bool iOpenedConnection = false;
+            bool iOpenedTheTransaction = false;
+
+            try
+            {
+                if (!this.repository.IsOpen)
+                {
+                    iOpenedConnection = true;
+
+                    this.repository.Open();
+
+                    if (!this.repository.IsOpen)
+                        throw new Exception("The Repository is not reporting being Opened after we opened it!");
+                }
+
+                if (transaction == null)
+                {
+                    transaction = this.repository.StartTransaction();
+
+                    iOpenedTheTransaction = true;
+                }
+                
+                if (!Exists(model.Key, transaction))
+                    this.repository.Insert(model, transaction);
+                else
+                    this.repository.Update(model, transaction);
+
+                if (iOpenedTheTransaction)
+                    transaction.Commit();
+            }
+            catch (Exception ex)
+            {
+                if (iOpenedTheTransaction)
+                    transaction.Rollback();
+
+                throw ex;
+            }
+            finally
+            {
+                if (iOpenedConnection)
+                    this.repository.Close();
+
+                if (iOpenedTheTransaction)
+                    transaction.Dispose();
+            }
         }
 
         public virtual void Save(IEnumerable<TModel> models, IDbTransaction transaction)
@@ -247,7 +416,7 @@ namespace Repository
 
                 IEnumerable<TKey> keys = ExtractKeys(models);
 
-                IEnumerable<TKey> savedKeys = new List<TKey>(Exists(keys));
+                IEnumerable<TKey> savedKeys = new List<TKey>(Exists(keys, transaction));
                 IEnumerable<TKey> notSavedKeys = keys.Where(_key => !savedKeys.Any(_savedKey => _savedKey.Equals(_key))).ToList();
 
                 if (notSavedKeys.Count() > 0)

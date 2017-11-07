@@ -31,12 +31,16 @@ namespace Repository.Framework
         void Delete(TKey id, IDbTransaction transaction);
         void Delete(IEnumerable<TKey> ids, IDbTransaction transaction);
         bool Exists(TKey id);
+        bool Exists(TKey id, IDbTransaction transaction);
         IEnumerable<TKey> Exists(IEnumerable<TKey> ids);
+        IEnumerable<TKey> Exists(IEnumerable<TKey> ids, IDbTransaction transaction);
         void Insert(TModel model, IDbTransaction transaction);
         void Insert(IEnumerable<TModel> models, IDbTransaction transaction);
         void Open();
         IEnumerable<TModel> Select(TMultipleSearch search);
+        IEnumerable<TModel> Select(TMultipleSearch search, IDbTransaction transaction);
         TModel Select(TSingleSearch search);
+        TModel Select(TSingleSearch search, IDbTransaction transaction);
         IDbTransaction StartTransaction();
         void Update(TModel model, IDbTransaction transaction);
         void Update(IEnumerable<TModel> models, IDbTransaction transaction);

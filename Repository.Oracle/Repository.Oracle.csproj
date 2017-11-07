@@ -1,14 +1,14 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{0DC53A74-D722-4000-92D2-A5835F1DFC70}</ProjectGuid>
+    <ProjectGuid>{A9ED9B70-7E57-4745-9E4E-9D87F5EE22B5}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Repository.Framework</RootNamespace>
-    <AssemblyName>Repository.Framework</AssemblyName>
+    <RootNamespace>Repository.Oracle</RootNamespace>
+    <AssemblyName>Repository.Oracle</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <SccProjectName>SAK</SccProjectName>
@@ -45,22 +45,21 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="DatabaseType.cs" />
-    <Compile Include="IDatabase.cs" />
-    <Compile Include="IKey.cs" />
-    <Compile Include="IModel.cs" />
-    <Compile Include="IMultipleSearch.cs" />
-    <Compile Include="IRepository.cs" />
-    <Compile Include="IService.cs" />
-    <Compile Include="ISingleSearch.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="OracleHelper.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Repository.Oracle.nuspec" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Repository.Framework\Repository.Framework.csproj">
+      <Project>{0dc53a74-d722-4000-92d2-a5835f1dfc70}</Project>
+      <Name>Repository.Framework</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Repository\Repository.csproj">
+      <Project>{0aa4acf0-862d-4fe2-850a-2096610ff4fc}</Project>
+      <Name>Repository</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
-  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
-       Other similar extension points exist, see Microsoft.Common.targets.
-  <Target Name="BeforeBuild">
-  </Target>
-  <Target Name="AfterBuild">
-  </Target>
-  -->
 </Project>

@@ -2,10 +2,10 @@
 using System.Runtime.CompilerServices;
 using System.Runtime.InteropServices;
 
-[assembly: AssemblyTitle("Repository")]
-[assembly: AssemblyDescription("Provides base classes for implementation of the Repository Pattern.")]
+[assembly: AssemblyTitle("Repository.Oracle")]
+[assembly: AssemblyDescription("Provides helper classes using the Repository Pattern on an Oracle database.")]
 [assembly: AssemblyCompany("Hyster Yale Group")]
-[assembly: AssemblyProduct("Repository")]
+[assembly: AssemblyProduct("Repository.Oracle")]
 [assembly: AssemblyCopyright("Copyright © 2017")]
 
 [assembly: ComVisible(false)]

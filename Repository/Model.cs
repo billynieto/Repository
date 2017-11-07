@@ -21,7 +21,7 @@ namespace Repository
     {
         protected TKey key;
 
-        public TKey Key { get { return this.key; } }
+        public TKey Key { get { return this.key; } set { this.key = value; } }
 
         public Model(TKey key)
         {
