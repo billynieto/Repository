@@ -4,9 +4,8 @@ using System.Runtime.InteropServices;
 
 [assembly: AssemblyTitle("Repository")]
 [assembly: AssemblyDescription("Provides base classes for implementation of the Repository Pattern.")]
-[assembly: AssemblyCompany("Hyster Yale Group")]
 [assembly: AssemblyProduct("Repository")]
-[assembly: AssemblyCopyright("Copyright © 2017")]
+[assembly: AssemblyCopyright("Copyright © 2019")]
 
 [assembly: ComVisible(false)]
 

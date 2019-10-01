@@ -1,15 +1,19 @@
 <?xml version="1.0"?>
 <package >
   <metadata>
-    <id>$id$</id>
-    <version>$version$</version>
-    <authors>$author$</authors>
-    <owners>$author$</owners>
-    <projectUrl>http://cpmtfs:8080/tfs/ProductDevelopmentCollection/Repository</projectUrl>
-    <iconUrl>http://cpmtfs:8080/tfs/ProductDevelopmentCollection/_api/_common/identityImage?id=a03b8501-0481-49f1-8460-8ab3dfca4e06&amp;__v=1</iconUrl>
+    <id>Repository.AS400</id>
+    <version>2.2.0</version>
+    <authors>Billy Nieto</authors>
+    <projectUrl>https://github.com/billynieto/Repository</projectUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
-    <description>$description$</description>
-    <copyright>Copyright 2017</copyright>
+    <description>Provides helper classes using the Repository Pattern on an AS 400 database.</description>
+    <copyright>Copyright 2019</copyright>
     <tags>Repository Pattern Framework DB2 AS400</tags>
+    <dependencies>
+      <dependency id="Repository" version="2.2.0" />
+    </dependencies>
   </metadata>
+  <files>
+    <file src="bin/Release/Repository.AS400.dll" target="lib/Repository.AS400.dll" />
+  </files>
 </package>

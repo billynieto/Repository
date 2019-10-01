@@ -4,9 +4,8 @@ using System.Runtime.InteropServices;
 
 [assembly: AssemblyTitle("Repository.Oracle")]
 [assembly: AssemblyDescription("Provides helper classes using the Repository Pattern on an Oracle database.")]
-[assembly: AssemblyCompany("Hyster Yale Group")]
 [assembly: AssemblyProduct("Repository.Oracle")]
-[assembly: AssemblyCopyright("Copyright © 2017")]
+[assembly: AssemblyCopyright("Copyright © 2019")]
 
 [assembly: ComVisible(false)]
 
