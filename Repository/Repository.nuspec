@@ -1,11 +1,12 @@
 <?xml version="1.0"?>
 <package >
   <metadata>
-    <id>Repository</id>
+    <id>T5.Repository</id>
     <version>2.2.0</version>
     <authors>Billy Nieto</authors>
     <projectUrl>https://github.com/billynieto/Repository</projectUrl>
-    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <license type="expression">MIT</license>
+    <requireLicenseAcceptance>true</requireLicenseAcceptance>
     <description>Provides base classes for implementation of the Repository Pattern.</description>
     <copyright>Copyright 2019</copyright>
     <tags>Repository Pattern Framework</tags>
