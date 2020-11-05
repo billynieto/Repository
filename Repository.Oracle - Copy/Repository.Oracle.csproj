@@ -4,14 +4,18 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{EE020D60-9011-4017-A281-A24C54CE3CF6}</ProjectGuid>
+    <ProjectGuid>{A9ED9B70-7E57-4745-9E4E-9D87F5EE22B5}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Repository.EntityFramework5</RootNamespace>
-    <AssemblyName>Repository.EntityFramework5</AssemblyName>
-    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <RootNamespace>Repository.Oracle</RootNamespace>
+    <AssemblyName>Repository.Oracle</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
-    <Deterministic>true</Deterministic>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+    <TargetFrameworkProfile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -31,13 +35,8 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="EntityFramework, Version=5.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
-      <HintPath>..\packages\EntityFramework.5.0.0\lib\net45\EntityFramework.dll</HintPath>
-    </Reference>
     <Reference Include="System" />
-    <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
-    <Reference Include="System.Data.Entity" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -46,21 +45,19 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="DatabaseWrapper.cs" />
-    <Compile Include="IDatabase.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="OracleHelper.cs" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="packages.config" />
-    <None Include="Repository.EntityFramework5.nuspec" />
+    <None Include="Repository.Oracle.nuspec" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Repository.Framework\Repository.Framework.csproj">
-      <Project>{8884b725-f9b2-4ad0-8f0c-706b0d7bb7f5}</Project>
+      <Project>{0dc53a74-d722-4000-92d2-a5835f1dfc70}</Project>
       <Name>Repository.Framework</Name>
     </ProjectReference>
     <ProjectReference Include="..\Repository\Repository.csproj">
-      <Project>{20ba7328-a3b2-4d77-a38b-7fcbb7d88b75}</Project>
+      <Project>{0aa4acf0-862d-4fe2-850a-2096610ff4fc}</Project>
       <Name>Repository</Name>
     </ProjectReference>
   </ItemGroup>

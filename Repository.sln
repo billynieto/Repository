@@ -1,21 +1,21 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 15
-VisualStudioVersion = 15.0.26430.15
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30611.23
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Repository", "Repository\Repository.csproj", "{0AA4ACF0-862D-4FE2-850A-2096610FF4FC}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Repository", "Repository\Repository.csproj", "{20BA7328-A3B2-4D77-A38B-7FCBB7D88B75}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Repository.Framework", "Repository.Framework\Repository.Framework.csproj", "{0DC53A74-D722-4000-92D2-A5835F1DFC70}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Repository.AS400", "Repository.AS400\Repository.AS400.csproj", "{BABD93AA-F908-437F-B2EF-4AD7793A2E4E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Repository.Oracle", "Repository.Oracle\Repository.Oracle.csproj", "{A9ED9B70-7E57-4745-9E4E-9D87F5EE22B5}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Repository.Framework", "Repository.Framework\Repository.Framework.csproj", "{8884B725-F9B2-4AD0-8F0C-706B0D7BB7F5}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Repository.SqlServer", "Repository.SqlServer\Repository.SqlServer.csproj", "{99363D64-45BD-4C17-85BC-A9E1292A6FE9}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Repository.Oracle", "Repository.Oracle\Repository.Oracle.csproj", "{6767C863-E671-4057-86E9-B2F433666965}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Repository.AS400", "Repository.AS400\Repository.AS400.csproj", "{291F2615-97FA-40AD-BCBE-82C535BC1D6C}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Repository.SqlServer", "Repository.SqlServer\Repository.SqlServer.csproj", "{51855F3B-423A-4241-8E26-278A1885AA1C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Repository.Test.EntityFramework5", "Repository.Test.EntityFramework5\Repository.Test.EntityFramework5.csproj", "{84939CF0-4BB5-48F7-878A-3215C1BFEAFF}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Repository.Test.EntityFramework5", "Repository.Test.EntityFramework5\Repository.Test.EntityFramework5.csproj", "{91454056-FC8B-4EF1-9B69-26685C447166}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Repository.EntityFramework5", "Repository.EntityFramework5\Repository.EntityFramework5.csproj", "{705774C8-53F1-466F-9DF3-FE6FFF001F83}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Repository.EntityFramework5", "Repository.EntityFramework5\Repository.EntityFramework5.csproj", "{EE020D60-9011-4017-A281-A24C54CE3CF6}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -23,63 +23,39 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{0AA4ACF0-862D-4FE2-850A-2096610FF4FC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{0AA4ACF0-862D-4FE2-850A-2096610FF4FC}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{0AA4ACF0-862D-4FE2-850A-2096610FF4FC}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{0AA4ACF0-862D-4FE2-850A-2096610FF4FC}.Release|Any CPU.Build.0 = Release|Any CPU
-		{0DC53A74-D722-4000-92D2-A5835F1DFC70}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{0DC53A74-D722-4000-92D2-A5835F1DFC70}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{0DC53A74-D722-4000-92D2-A5835F1DFC70}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{0DC53A74-D722-4000-92D2-A5835F1DFC70}.Release|Any CPU.Build.0 = Release|Any CPU
-		{A9ED9B70-7E57-4745-9E4E-9D87F5EE22B5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{A9ED9B70-7E57-4745-9E4E-9D87F5EE22B5}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{A9ED9B70-7E57-4745-9E4E-9D87F5EE22B5}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{A9ED9B70-7E57-4745-9E4E-9D87F5EE22B5}.Release|Any CPU.Build.0 = Release|Any CPU
-		{99363D64-45BD-4C17-85BC-A9E1292A6FE9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{99363D64-45BD-4C17-85BC-A9E1292A6FE9}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{99363D64-45BD-4C17-85BC-A9E1292A6FE9}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{99363D64-45BD-4C17-85BC-A9E1292A6FE9}.Release|Any CPU.Build.0 = Release|Any CPU
-		{291F2615-97FA-40AD-BCBE-82C535BC1D6C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{291F2615-97FA-40AD-BCBE-82C535BC1D6C}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{291F2615-97FA-40AD-BCBE-82C535BC1D6C}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{291F2615-97FA-40AD-BCBE-82C535BC1D6C}.Release|Any CPU.Build.0 = Release|Any CPU
-		{84939CF0-4BB5-48F7-878A-3215C1BFEAFF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{84939CF0-4BB5-48F7-878A-3215C1BFEAFF}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{84939CF0-4BB5-48F7-878A-3215C1BFEAFF}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{84939CF0-4BB5-48F7-878A-3215C1BFEAFF}.Release|Any CPU.Build.0 = Release|Any CPU
-		{705774C8-53F1-466F-9DF3-FE6FFF001F83}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{705774C8-53F1-466F-9DF3-FE6FFF001F83}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{705774C8-53F1-466F-9DF3-FE6FFF001F83}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{705774C8-53F1-466F-9DF3-FE6FFF001F83}.Release|Any CPU.Build.0 = Release|Any CPU
+		{20BA7328-A3B2-4D77-A38B-7FCBB7D88B75}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{20BA7328-A3B2-4D77-A38B-7FCBB7D88B75}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{20BA7328-A3B2-4D77-A38B-7FCBB7D88B75}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{20BA7328-A3B2-4D77-A38B-7FCBB7D88B75}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BABD93AA-F908-437F-B2EF-4AD7793A2E4E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BABD93AA-F908-437F-B2EF-4AD7793A2E4E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BABD93AA-F908-437F-B2EF-4AD7793A2E4E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BABD93AA-F908-437F-B2EF-4AD7793A2E4E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8884B725-F9B2-4AD0-8F0C-706B0D7BB7F5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8884B725-F9B2-4AD0-8F0C-706B0D7BB7F5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8884B725-F9B2-4AD0-8F0C-706B0D7BB7F5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8884B725-F9B2-4AD0-8F0C-706B0D7BB7F5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6767C863-E671-4057-86E9-B2F433666965}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6767C863-E671-4057-86E9-B2F433666965}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6767C863-E671-4057-86E9-B2F433666965}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6767C863-E671-4057-86E9-B2F433666965}.Release|Any CPU.Build.0 = Release|Any CPU
+		{51855F3B-423A-4241-8E26-278A1885AA1C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{51855F3B-423A-4241-8E26-278A1885AA1C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{51855F3B-423A-4241-8E26-278A1885AA1C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{51855F3B-423A-4241-8E26-278A1885AA1C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{91454056-FC8B-4EF1-9B69-26685C447166}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{91454056-FC8B-4EF1-9B69-26685C447166}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{91454056-FC8B-4EF1-9B69-26685C447166}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{91454056-FC8B-4EF1-9B69-26685C447166}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EE020D60-9011-4017-A281-A24C54CE3CF6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EE020D60-9011-4017-A281-A24C54CE3CF6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EE020D60-9011-4017-A281-A24C54CE3CF6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EE020D60-9011-4017-A281-A24C54CE3CF6}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
-	GlobalSection(TeamFoundationVersionControl) = preSolution
-		SccNumberOfProjects = 8
-		SccEnterpriseProvider = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
-		SccTeamFoundationServer = http://cpmtfs2/productdevelopmentcollection
-		SccLocalPath0 = .
-		SccProjectUniqueName1 = Repository\\Repository.csproj
-		SccProjectName1 = Repository
-		SccLocalPath1 = Repository
-		SccProjectUniqueName2 = Repository.Framework\\Repository.Framework.csproj
-		SccProjectName2 = Repository.Framework
-		SccLocalPath2 = Repository.Framework
-		SccProjectUniqueName3 = Repository.Oracle\\Repository.Oracle.csproj
-		SccProjectName3 = Repository.Oracle
-		SccLocalPath3 = Repository.Oracle
-		SccProjectUniqueName4 = Repository.SqlServer\\Repository.SqlServer.csproj
-		SccProjectName4 = Repository.SqlServer
-		SccLocalPath4 = Repository.SqlServer
-		SccProjectUniqueName5 = Repository.AS400\\Repository.AS400.csproj
-		SccProjectName5 = Repository.AS400
-		SccLocalPath5 = Repository.AS400
-		SccProjectUniqueName6 = Repository.Test.EntityFramework5\\Repository.Test.EntityFramework5.csproj
-		SccProjectName6 = Repository.Test.EntityFramework5
-		SccLocalPath6 = Repository.Test.EntityFramework5
-		SccProjectUniqueName7 = Repository.EntityFramework5\\Repository.EntityFramework5.csproj
-		SccProjectName7 = Repository.EntityFramework5
-		SccLocalPath7 = Repository.EntityFramework5
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {45B15E29-FBF2-4870-B8E2-0553C6143CD5}
 	EndGlobalSection
 EndGlobal
