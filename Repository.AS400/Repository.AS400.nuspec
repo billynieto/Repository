@@ -1,20 +1,20 @@
 <?xml version="1.0"?>
 <package >
   <metadata>
-    <id>T5.Repository.EntityFramework5</id>
+    <id>T5.Repository.AS400</id>
     <version>2.2.2</version>
     <authors>Billy Nieto</authors>
     <projectUrl>https://github.com/billynieto/Repository</projectUrl>
 	<license type="expression">MIT</license>
     <requireLicenseAcceptance>true</requireLicenseAcceptance>
-    <description>Provides helper classes using the Repository Pattern to communicate with a database using Entity Framework 5.</description>
+    <description>Provides helper classes using the Repository Pattern on an AS 400 database.</description>
     <copyright>2020</copyright>
-    <tags>Repository Pattern Framework EntityFramework</tags>
+    <tags>Repository Pattern Framework DB2 AS400</tags>
     <dependencies>
       <dependency id="T5.Repository" version="2.2.2" />
     </dependencies>
   </metadata>
   <files>
-    <file src="bin/Release/Repository.EntityFramework5.dll" target="lib/Repository.EntityFramework5.dll" />
+    <file src="bin/Release/netstandard2.0/Repository.AS400.dll" target="lib/Repository.AS400.dll" />
   </files>
 </package>

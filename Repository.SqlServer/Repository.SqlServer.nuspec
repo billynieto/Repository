@@ -1,0 +1,20 @@
+<?xml version="1.0"?>
+<package >
+  <metadata>
+    <id>T5.Repository.SqlServer</id>
+    <version>2.2.2</version>
+    <authors>Billy Nieto</authors>
+    <projectUrl>https://github.com/billynieto/Repository</projectUrl>
+	<license type="expression">MIT</license>
+    <requireLicenseAcceptance>true</requireLicenseAcceptance>
+    <description>Provides helper classes using the Repository Pattern on a SQL Server database.</description>
+    <copyright>2020</copyright>
+    <tags>Repository Pattern Framework MSSQL SQLServer SQL Server</tags>
+    <dependencies>
+      <dependency id="Repository" version="2.2.2" />
+    </dependencies>
+  </metadata>
+  <files>
+    <file src="bin/Release/netstandard2.0/Repository.SqlServer.dll" target="lib/Repository.SqlServer.dll" />
+  </files>
+</package>

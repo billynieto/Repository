@@ -1,27 +1,18 @@
 <?xml version="1.0"?>
 <package >
   <metadata>
-<<<<<<< HEAD
     <id>T5.Repository.Test.EntityFramework5</id>
-    <version>2.2.1</version>
-=======
-    <id>Repository.Test.EntityFramework5</id>
-    <version>2.2.0</version>
->>>>>>> parent of 5f18306... Updated project to use MIT License.
+    <version>2.2.2</version>
     <authors>Billy Nieto</authors>
     <projectUrl>https://github.com/billynieto/Repository</projectUrl>
-    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+	<license type="expression">MIT</license>
+    <requireLicenseAcceptance>true</requireLicenseAcceptance>
     <description>Provides unit testing helper classes using the Repository Pattern to communicate with a database using Entity Framework 5.</description>
     <copyright>2020</copyright>
     <tags>Repository Pattern Framework Test EntityFramework</tags>
     <dependencies>
-<<<<<<< HEAD
-      <dependency id="T5.Repository" version="2.2.1" />
-      <dependency id="T5.Repository.EntityFramework5" version="2.2.1" />
-=======
-      <dependency id="Repository" version="2.2.0" />
-      <dependency id="Repository.EntityFramework5" version="2.2.0" />
->>>>>>> parent of 5f18306... Updated project to use MIT License.
+      <dependency id="T5.Repository" version="2.2.2" />
+      <dependency id="T5.Repository.EntityFramework5" version="2.2.2" />
     </dependencies>
   </metadata>
   <files>
